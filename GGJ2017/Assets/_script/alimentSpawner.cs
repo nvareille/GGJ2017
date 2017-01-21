@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using Assets.Scripts.GamePlay;
 using Assets.Scripts.ScriptableObjects;
+using Assets.Scripts.UI;
 using UnityEngine;
 
 public class alimentSpawner : MonoBehaviour
 {
     public Recipe Recipe;
+    public addElement Adder;
     public List<AlimentKind> AlimentKinds;
+    public UIAlimentRequirement Requirement;
 	public GameObject aliment;
 	private float Timer;
 
@@ -15,7 +18,9 @@ public class alimentSpawner : MonoBehaviour
 	void Start ()
     {
         AlimentKinds = new List<AlimentKind>();
+        Adder.Init(Recipe.Ingredients.Count);
 		Timer = 3;
+        Requirement.Init(Recipe.Ingredients);
 	}
 	
 	// Update is called once per frame

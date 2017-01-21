@@ -11,6 +11,7 @@ namespace Assets.Scripts.ScriptableObjects
     {
         public string Name;
         public Sprite Texture;
-
+        public Sprite EndTexture;
+        public float[] Size;
     }
 }

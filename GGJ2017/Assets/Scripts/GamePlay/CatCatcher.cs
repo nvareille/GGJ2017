@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using Assets.Scripts.ScriptableObjects;
+using Assets.Scripts.UI;
 
 namespace Assets.Scripts.GamePlay
 {
@@ -12,6 +13,9 @@ namespace Assets.Scripts.GamePlay
 		public bool asCaught = false;
 		public AlimentKind getAliment;
 		public addElement _add;
+
+        public UIAlimentRequirement UIAliment;
+
         void OnTriggerEnter2D(Collider2D c)
         {
             Debug.Log(c.name);
@@ -22,6 +26,7 @@ namespace Assets.Scripts.GamePlay
 				asCaught = true;
 				getAliment = c.gameObject.GetComponent<Aliment>().AlimentKind;
 				_add.addElemToArray (this);
+                UIAliment.UpdatePick(_add.I - 1, getAliment);
             }
         }
     }
