@@ -21,7 +21,7 @@ namespace Assets.Scripts.GamePlay
                 c.gameObject.GetComponent<Aliment>().Parent.GetComponent<Animator>().SetBool("Caught", true);
 				asCaught = true;
 				getAliment = c.gameObject.GetComponent<Aliment>().AlimentKind;
-				_add.addElemToArray ();
+				_add.addElemToArray (this);
             }
         }
     }

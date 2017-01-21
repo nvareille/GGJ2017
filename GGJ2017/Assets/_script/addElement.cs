@@ -8,7 +8,6 @@ public class addElement : MonoBehaviour {
 
 
 	public AlimentKind[] arrayElem;
-	public CatCatcher tocatch;
 	int i = 0;
 
 	// 
@@ -29,7 +28,7 @@ public class addElement : MonoBehaviour {
 
 	}
 
-	public void addElemToArray()
+	public void addElemToArray(CatCatcher tocatch)
 	{
 			if (tocatch.asCaught)
 				arrayElem [i] = tocatch.getAliment;
