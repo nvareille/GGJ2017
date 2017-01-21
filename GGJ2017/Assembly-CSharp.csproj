@@ -48,6 +48,9 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\GamePlay\HookMover.cs" />
      <Compile Include="Assets\Scripts\GamePlay\TetherMovement.cs" />
+     <Compile Include="Assets\Scripts\Menu\Exit.cs" />
+     <Compile Include="Assets\Scripts\Menu\Play.cs" />
+     <Compile Include="Assets\Scripts\Menu\Shop.cs" />
      <Compile Include="Assets\_script\intro.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
