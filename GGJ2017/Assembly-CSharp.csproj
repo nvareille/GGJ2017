@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Ambiance\SeagullPlayer.cs" />
      <Compile Include="Assets\Scripts\GamePlay\Aliment.cs" />
+     <Compile Include="Assets\Scripts\GamePlay\AlimentDestroyer.cs" />
      <Compile Include="Assets\Scripts\GamePlay\CatCatcher.cs" />
      <Compile Include="Assets\Scripts\GamePlay\HookMover.cs" />
      <Compile Include="Assets\Scripts\GamePlay\TetherMovement.cs" />
@@ -57,6 +58,7 @@
      <Compile Include="Assets\Scripts\ScriptableObjects\AlimentKind.cs" />
      <Compile Include="Assets\_script\AnimManagerCat.cs" />
      <Compile Include="Assets\_script\AnimatorManager.cs" />
+     <Compile Include="Assets\_script\addElement.cs" />
      <Compile Include="Assets\_script\alimentSpawner.cs" />
      <Compile Include="Assets\_script\intro.cs" />
  <Reference Include="UnityEngine.UI">

@@ -1,8 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_script\intro.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_script\addElement.cs">
     <Files>
       <File FileName="Assets\_script\intro.cs" Line="9" Column="2" />
+      <File FileName="Assets\_script\alimentSpawner.cs" Line="22" Column="19" />
+      <File FileName="Assets\_script\AnimatorManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\_script\AnimManagerCat.cs" Line="1" Column="1" />
+      <File FileName="Assets\_script\addElement.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
