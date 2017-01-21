@@ -8,7 +8,7 @@ namespace Assets.Scripts.GamePlay
 {
     public class TetherMovement : MonoBehaviour
     {
-        public RectTransform Transform;
+        public Transform Transform;
 
         public float TetherModifier = 1f;
         public float InertModifier = 1f;
