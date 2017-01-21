@@ -6,6 +6,9 @@ public class AlimentDestroyer : MonoBehaviour
 {
     public void OnTriggerEnter2D(Collider2D c)
     {
-        Debug.Log(c.name);
+        if (c.name.Contains("alimentGrab"))
+        {
+            Destroy(c.gameObject.transform.parent.gameObject);
+        }
     }
 }
