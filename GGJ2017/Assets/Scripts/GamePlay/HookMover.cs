@@ -7,6 +7,8 @@ public class HookMover : MonoBehaviour
 {
     public float SpeedModifier = 1f;
 
+    public AudioSource DropAudio;
+
     public TetherMovement TetherMovement;
     public Animator Animator;
 
@@ -24,8 +26,11 @@ public class HookMover : MonoBehaviour
         else
             TetherMovement.AddTether(-tether);
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
             Animator.SetBool("Casting", true);
+            DropAudio.Play();
+        }
         else
             Animator.SetBool("Casting", false);
     }
