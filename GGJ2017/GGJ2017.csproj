@@ -80,6 +80,7 @@
     <Compile Include="Assets\AssetStore\ShaderForge\Example Assets\Scripts\SoftNormalsToVertexColor.cs" />
     <Compile Include="Assets\Scripts\Ambiance\SeagullPlayer.cs" />
     <Compile Include="Assets\Scripts\GamePlay\Aliment.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\AlimentDestroyer.cs" />
     <Compile Include="Assets\Scripts\GamePlay\CatCatcher.cs" />
     <Compile Include="Assets\Scripts\GamePlay\HookMover.cs" />
     <Compile Include="Assets\Scripts\GamePlay\TetherMovement.cs" />
