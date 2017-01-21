@@ -46,8 +46,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Ambiance\SeagullPlayer.cs" />
+     <Compile Include="Assets\Scripts\GamePlay\Aliment.cs" />
+     <Compile Include="Assets\Scripts\GamePlay\CatCatcher.cs" />
      <Compile Include="Assets\Scripts\GamePlay\HookMover.cs" />
      <Compile Include="Assets\Scripts\GamePlay\TetherMovement.cs" />
+     <Compile Include="Assets\Scripts\Menu\Exit.cs" />
+     <Compile Include="Assets\Scripts\Menu\Play.cs" />
+     <Compile Include="Assets\Scripts\Menu\Shop.cs" />
+     <Compile Include="Assets\Scripts\ScriptableObjects\AlimentKind.cs" />
      <Compile Include="Assets\_script\AnimManagerCat.cs" />
      <Compile Include="Assets\_script\AnimatorManager.cs" />
      <Compile Include="Assets\_script\alimentSpawner.cs" />
