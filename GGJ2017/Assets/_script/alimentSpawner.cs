@@ -1,30 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts.GamePlay;
+using Assets.Scripts.ScriptableObjects;
 using UnityEngine;
 
-public class alimentSpawner : MonoBehaviour {
-
+public class alimentSpawner : MonoBehaviour
+{
+    public AlimentKind[] AlimentKinds;
 	public GameObject aliment;
 	private float Timer;
 
 	// Use this for initialization
-	void Start () {
-		Timer = Time.time + 3;
+	void Start ()
+    {
+		Timer = 3;
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
+        Timer -= Time.deltaTime;
 
-
-		if (Timer < Time.time) 
+        if (Timer < 0) 
 		{
-			Instantiate (aliment, transform.position, transform.rotation);
-			Timer = Time.time + 3;
+			GameObject obj = Instantiate (aliment, transform.position, transform.rotation);
+
+		    Aliment ali = obj.GetComponent<Aliment>();
+		    ali.Init(AlimentKinds[0]);
+            Timer = 3;
 		}
-	}
-
-	void spawn ()
-	{
-
 	}
 }

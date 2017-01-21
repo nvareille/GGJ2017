@@ -10,9 +10,7 @@ public class AnimManagerCat : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-
-		if (!this.GetComponent<Animator> ().GetBool ("isPlaying"))
-			this.GetComponent<Animator> ().Stop ();
+	void Update ()
+    {
 	}
 }
