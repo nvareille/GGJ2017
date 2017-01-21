@@ -10,7 +10,7 @@ namespace Assets.Scripts.ScriptableObjects
     public class AlimentKind : ScriptableObject
     {
         public string Name;
-        public Texture2D Texture;
+        public Sprite Texture;
 
     }
 }
