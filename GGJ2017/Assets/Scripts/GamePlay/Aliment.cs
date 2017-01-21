@@ -11,6 +11,7 @@ namespace Assets.Scripts.GamePlay
     {
         public AlimentKind AlimentKind;
         public SpriteRenderer Render;
+        public GameObject Parent;
 
         public void Init(AlimentKind kind)
         {

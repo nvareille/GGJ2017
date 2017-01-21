@@ -23,9 +23,9 @@ public class alimentSpawner : MonoBehaviour
 
         if (Timer < 0) 
 		{
-			GameObject obj = Instantiate (aliment, transform.position, transform.rotation);
-
-		    Aliment ali = obj.GetComponent<Aliment>();
+			GameObject obj = Instantiate (aliment);
+            
+		    Aliment ali = obj.transform.GetChild(0).GetComponent<Aliment>();
 		    ali.Init(AlimentKinds[0]);
             Timer = 3;
 		}

@@ -10,7 +10,10 @@ namespace Assets.Scripts.GamePlay
     {
         void OnTriggerEnter2D(Collider2D c)
         {
-            Debug.Log(c.gameObject.name);
+            if (c.gameObject.name.Contains("aliment"))
+            {
+                c.gameObject.GetComponent<Aliment>().Parent.GetComponent<Animator>().SetBool("Caught", true);
+            }
         }
     }
 }
