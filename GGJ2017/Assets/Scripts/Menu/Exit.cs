@@ -14,6 +14,6 @@ public class Exit : MonoBehaviour {
 		
 	}
 	public void ExitButton(){
-		Debug.Log ("I'm the exit button !!");
+		Application.Quit ();
 	}
 }
