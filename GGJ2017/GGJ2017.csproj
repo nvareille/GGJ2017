@@ -80,6 +80,7 @@
     <Compile Include="Assets\AssetStore\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
     <Compile Include="Assets\AssetStore\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
     <Compile Include="Assets\AssetStore\ShaderForge\Example Assets\Scripts\SoftNormalsToVertexColor.cs" />
+    <Compile Include="Assets\Scripts\Ambiance\SeagullPlayer.cs" />
     <Compile Include="Assets\Scripts\GamePlay\Aliment.cs" />
     <Compile Include="Assets\Scripts\GamePlay\CatCatcher.cs" />
     <Compile Include="Assets\Scripts\GamePlay\HookMover.cs" />
@@ -283,6 +284,7 @@
     <None Include="Assets\AssetStore\ShaderForge\Example Assets\Shaders\VertexColorRounding.shader" />
     <None Include="Assets\AssetStore\ShaderForge\Readme.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>
