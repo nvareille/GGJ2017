@@ -23,6 +23,9 @@ namespace Assets.Scripts.GamePlay
 
         public bool EndGameBool;
 
+        public AudioClip Win;
+        public AudioSource Source;
+
         public float Timer;
         private int Count = 0;
 
@@ -35,6 +38,9 @@ namespace Assets.Scripts.GamePlay
 			Money.transform.Find("MoneyText").gameObject.GetComponent<UICountMoney>().setTotalMoney();
             Spawner.gameObject.SetActive(false);
             ExitButton.SetActive(true);
+            Source.clip = Win;
+            
+            Source.Play();
         }
 
         public void Update()

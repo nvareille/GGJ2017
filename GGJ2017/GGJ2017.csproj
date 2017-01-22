@@ -101,6 +101,7 @@
     <Compile Include="Assets\Scripts\UI\UIAliment.cs" />
     <Compile Include="Assets\Scripts\UI\UIAlimentRequirement.cs" />
     <Compile Include="Assets\Scripts\UI\UICountMoney.cs" />
+    <Compile Include="Assets\Scripts\introplay.cs" />
     <Compile Include="Assets\_script\AnimManagerCat.cs" />
     <Compile Include="Assets\_script\AnimatorManager.cs" />
     <Compile Include="Assets\_script\addElement.cs" />
