@@ -17,7 +17,8 @@ public class DisplayShop : MonoBehaviour {
 		
 	}
 
-	public void ShowShop(){
+	public void ShowShop()
+    {
 		GOMenu.SetActive (false);
 		GOShop.SetActive (true);
 	}
