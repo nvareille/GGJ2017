@@ -18,12 +18,12 @@ namespace Assets.Scripts.UI
         {
             Manager.Recipe = Recipes[r];
             DontDestroyOnLoad(Manager.gameObject);
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("GameScene");
         }
 
         public void Return()
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("UIMenu");
         }
     }
 }

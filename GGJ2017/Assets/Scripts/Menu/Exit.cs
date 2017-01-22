@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Exit : MonoBehaviour {
 
@@ -15,6 +16,12 @@ public class Exit : MonoBehaviour {
 	}
 	public void ExitButton()
     {
+		SceneManager.LoadScene("credits");
+	}
+
+	public void TrueExit()
+	{
 		Application.Quit ();
+
 	}
 }

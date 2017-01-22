@@ -18,6 +18,6 @@ public class Play : MonoBehaviour
 
 	public void PlayButton()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("LevelSelection");
     }
 }

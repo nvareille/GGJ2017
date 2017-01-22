@@ -68,7 +68,7 @@ namespace Assets.Scripts.GamePlay
 
         public void Return()
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene("UIMenu");
         }
     }
 }

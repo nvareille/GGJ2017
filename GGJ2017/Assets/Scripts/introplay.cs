@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class introplay : MonoBehaviour {
 
 	MovieTexture tex;
+	public bool isOutro;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +23,12 @@ public class introplay : MonoBehaviour {
 	IEnumerator WaitAndStart()
 	{
 		yield return new WaitForSeconds(1.5f);
-		SceneManager.LoadScene("UIMenu");
+		if (!isOutro)
+			SceneManager.LoadScene("UIMenu");
+		else
+		{
+			Application.Quit();
+			yield return new WaitForSeconds(20);
+		}
 	}
 }
