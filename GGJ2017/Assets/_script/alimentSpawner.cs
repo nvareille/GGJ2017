@@ -18,6 +18,9 @@ public class alimentSpawner : MonoBehaviour
 	void Start ()
     {
         AlimentKinds = new List<AlimentKind>();
+
+        Recipe = GameObject.Find("Recipe").GetComponent<RecipeManager>().Recipe;
+        
         Adder.Init(Recipe.Ingredients.Count);
 		Timer = 3;
         Requirement.Init(Recipe.Ingredients);
