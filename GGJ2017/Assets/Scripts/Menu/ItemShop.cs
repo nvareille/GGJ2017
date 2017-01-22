@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemShop : MonoBehaviour {
 
@@ -44,6 +45,7 @@ public class ItemShop : MonoBehaviour {
 			if (nameOfTheSkin [i] == _button.transform.parent.gameObject.name) {
 				actualSkin = _button.transform.parent.gameObject.name;
 				Debug.Log ("skin confirmed : " + actualSkin);
+				PlayerPrefs.SetString("CurrentSkin", _button.transform.parent.gameObject.GetComponent<RawImage>().texture.name);
 			}
 		}
 		if (actualSkin != _button.transform.parent.gameObject.name)
