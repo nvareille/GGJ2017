@@ -13,7 +13,8 @@ public class Exit : MonoBehaviour {
 	void Update () {
 		
 	}
-	public void ExitButton(){
+	public void ExitButton()
+    {
 		Application.Quit ();
 	}
 }
