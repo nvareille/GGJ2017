@@ -78,6 +78,8 @@
     <Compile Include="Assets\AssetStore\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
     <Compile Include="Assets\AssetStore\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
     <Compile Include="Assets\AssetStore\ShaderForge\Example Assets\Scripts\SoftNormalsToVertexColor.cs" />
+    <Compile Include="Assets\CoolPlayer.cs" />
+    <Compile Include="Assets\DontDestroy.cs" />
     <Compile Include="Assets\Scripts\Ambiance\SeagullPlayer.cs" />
     <Compile Include="Assets\Scripts\GamePlay\Aliment.cs" />
     <Compile Include="Assets\Scripts\GamePlay\AlimentDestroyer.cs" />

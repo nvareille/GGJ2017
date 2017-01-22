@@ -7,8 +7,12 @@ public class DisplayShop : MonoBehaviour {
 	public GameObject GOMenu;
 	public GameObject GOShop;
 
-	// Use this for initialization
-	void Start () {
+    public AudioClip Shop;
+    public AudioClip Menu;
+    public AudioSource Source;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -18,12 +22,17 @@ public class DisplayShop : MonoBehaviour {
 	}
 
 	public void ShowShop()
-    {
+	{
+	    Source.clip = Shop;
+        Source.Play();
 		GOMenu.SetActive (false);
 		GOShop.SetActive (true);
 	}
 
-	public void ShowMenu(){
+	public void ShowMenu()
+	{
+	    Source.clip = Menu;
+        Source.Play();
 		GOMenu.SetActive (true);
 		GOShop.SetActive (false);
 	}

@@ -11,7 +11,7 @@ namespace Assets.Scripts.Ambiance
         public AudioSource Source;
         public AudioClip[] Clips;
         private int Actual = -1;
-        private float Waiting;
+        private float Waiting = 3;
 
         public void Update()
         {
