@@ -38,8 +38,11 @@ namespace Assets.Scripts.UI
         public void UpdatePick(int pick, AlimentKind k)
         {
             if (Aliments[pick].Aliment.Name == k.Name)
+			{
                 Aliments[pick].gameObject.GetComponent<RawImage>().color = Color.green;
-            else
+				PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money") + 1);
+			}
+			else
                 Aliments[pick].gameObject.GetComponent<RawImage>().color = Color.red;
             Got.Add(k);
             if (Got.Count == Aliments.Count)

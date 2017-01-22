@@ -49,7 +49,7 @@ namespace Assets.Scripts.GamePlay
 
             float f = Tether * Pendulum;
 
-            Transform.rotation = Quaternion.Euler(new Vector3(0, 0, (f > 1 && f < -1 ? 0 : f)));
+            Transform.rotation = Quaternion.Euler(new Vector3(0, 0, (f < 1 && f > -1 ? 0 : f)));
             ReduceTether();
         }
 

@@ -12,6 +12,7 @@ namespace Assets.Scripts.GamePlay
         public Animator Waves;
         public Animator Cat;
         public Animator Assiette;
+		public Animator Money;
 
         public UIAlimentRequirement UI;
         public alimentSpawner Spawner;
@@ -27,7 +28,9 @@ namespace Assets.Scripts.GamePlay
         {
             Cat.SetBool("EndGame", true);
             Waves.SetBool("EndGame", true);
-            Assiette.SetBool("EndGame", true);
+			Assiette.SetBool("EndGame", true);
+            Money.SetBool("EndGame", true);
+			Money.transform.Find("MoneyText").gameObject.GetComponent<UICountMoney>().setTotalMoney();
             Spawner.gameObject.SetActive(false);
         }
 
