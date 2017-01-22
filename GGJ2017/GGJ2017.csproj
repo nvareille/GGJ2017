@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\GamePlay\EndGame.cs" />
     <Compile Include="Assets\Scripts\GamePlay\FoodFaller.cs" />
     <Compile Include="Assets\Scripts\GamePlay\HookMover.cs" />
+    <Compile Include="Assets\Scripts\GamePlay\RecipeManager.cs" />
     <Compile Include="Assets\Scripts\GamePlay\TetherMovement.cs" />
     <Compile Include="Assets\Scripts\Menu\DisplayShop.cs" />
     <Compile Include="Assets\Scripts\Menu\Exit.cs" />
