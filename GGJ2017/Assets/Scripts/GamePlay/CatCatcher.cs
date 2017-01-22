@@ -16,6 +16,12 @@ namespace Assets.Scripts.GamePlay
 
         public UIAlimentRequirement UIAliment;
 
+		void Start()
+		{
+			if (PlayerPrefs.GetString("CurrentSkin") != "")
+				GameObject.Find("Skin" + PlayerPrefs.GetString("CurrentSkin")).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+		}
+
         void OnTriggerEnter2D(Collider2D c)
         {
             Debug.Log(c.name);
