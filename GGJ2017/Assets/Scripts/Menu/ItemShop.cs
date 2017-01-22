@@ -5,12 +5,16 @@ using UnityEngine;
 public class ItemShop : MonoBehaviour {
 
 	public GameObject[] arrayItem;
+	public int[] price;
+	public string[] nameOfTheSkin;
+	public string actualSkin;
 	int mainIndex;
+	int indexBuy;
 
 	// Use this for initialization
 	void Start () {
 
-
+		indexBuy = 0;
 		//arrayItem = new GameObject[12];
 		arrayItem [0].SetActive (true);
 		arrayItem [1].SetActive (true);
@@ -28,16 +32,28 @@ public class ItemShop : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.LeftArrow) && mainIndex >= 2) {
 			displayByTheLeft ();
-		} else if (Input.GetKeyDown (KeyCode.RightArrow) && mainIndex < 15) {
+		} else if (Input.GetKeyDown (KeyCode.RightArrow) && mainIndex < 18) {
 			displayByTheRight ();
 			Debug.Log ("passe");
 		}
 	}
 
-	public void ScreenMouseRay()
+	public void confirmSkin(GameObject _button)
 	{
-		Vector3 mousePosition = Input.mousePosition;
-		mousePosition.z = 5f;
+		for (int i = 0; i < 21; i++) {
+			if (nameOfTheSkin [i] == _button.transform.parent.gameObject.name) {
+				actualSkin = _button.transform.parent.gameObject.name;
+				Debug.Log ("skin confirmed : " + actualSkin);
+			}
+		}
+		if (actualSkin != _button.transform.parent.gameObject.name)
+			Debug.Log ("you must buy the skin");
+	}
+
+	public void buySkin(GameObject _coin)
+	{
+		// condition pour l'achat
+		nameOfTheSkin [indexBuy] = _coin.transform.parent.gameObject.name;
 
 	}
 

@@ -50,6 +50,8 @@
      <Compile Include="Assets\Scripts\GamePlay\Aliment.cs" />
      <Compile Include="Assets\Scripts\GamePlay\AlimentDestroyer.cs" />
      <Compile Include="Assets\Scripts\GamePlay\CatCatcher.cs" />
+     <Compile Include="Assets\Scripts\GamePlay\EndGame.cs" />
+     <Compile Include="Assets\Scripts\GamePlay\FoodFaller.cs" />
      <Compile Include="Assets\Scripts\GamePlay\HookMover.cs" />
      <Compile Include="Assets\Scripts\GamePlay\TetherMovement.cs" />
      <Compile Include="Assets\Scripts\Menu\DisplayShop.cs" />
@@ -58,6 +60,9 @@
      <Compile Include="Assets\Scripts\Menu\Play.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\AlimentKind.cs" />
      <Compile Include="Assets\Scripts\ScriptableObjects\Recipe.cs" />
+     <Compile Include="Assets\Scripts\UI\UIAliment.cs" />
+     <Compile Include="Assets\Scripts\UI\UIAlimentRequirement.cs" />
+     <Compile Include="Assets\Scripts\UI\UICountMoney.cs" />
      <Compile Include="Assets\_script\AnimManagerCat.cs" />
      <Compile Include="Assets\_script\AnimatorManager.cs" />
      <Compile Include="Assets\_script\addElement.cs" />
