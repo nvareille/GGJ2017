@@ -11,6 +11,7 @@ public class ItemShop : MonoBehaviour {
 	public string actualSkin;
 	int mainIndex;
 	int indexBuy;
+	public Text totalMoney;
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +22,15 @@ public class ItemShop : MonoBehaviour {
 		arrayItem [1].SetActive (true);
 		arrayItem [2].SetActive (true);
 
+		foreach (GameObject item in arrayItem)
+		{
+			if (PlayerPrefs.HasKey(item.name))
+				item.transform.Find("Button Coin").GetComponent<Image>().color = new Color(0, 0, 0, 0);
+		}
+
 		mainIndex = 2;
+
+		totalMoney.text = PlayerPrefs.GetInt("Money").ToString();
 	}
 
 
@@ -56,11 +65,12 @@ public class ItemShop : MonoBehaviour {
 	public void buySkin(GameObject _coin)
 	{
 		// condition pour l'achat
-		if (PlayerPrefs.GetInt("Money") >= 4)
+		if (PlayerPrefs.GetInt("Money") >= 4 && !PlayerPrefs.HasKey(_coin.transform.parent.gameObject.name))
 		{
 			nameOfTheSkin [indexBuy] = _coin.transform.parent.gameObject.name;
 			PlayerPrefs.SetInt(_coin.transform.parent.gameObject.name, 1);
 			PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money") - 4);
+			totalMoney.text = PlayerPrefs.GetInt("Money").ToString();
 		}
 		else
 			print("Not enough money");
