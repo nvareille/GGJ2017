@@ -34,6 +34,11 @@ namespace Assets.Scripts.GamePlay
 				_add.addElemToArray (this);
                 UIAliment.UpdatePick(_add.I - 1, getAliment);
             }
+
+            if (c.gameObject.name.Contains("piranha"))
+            {
+                UIAliment.EndGame.FinishGame();
+            }
         }
     }
 }

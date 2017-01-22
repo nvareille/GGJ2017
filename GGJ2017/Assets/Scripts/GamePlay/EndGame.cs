@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Assets.Scripts.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts.GamePlay
 {
@@ -18,6 +19,7 @@ namespace Assets.Scripts.GamePlay
         public alimentSpawner Spawner;
 
         public GameObject Food;
+        public GameObject ExitButton;
 
         public bool EndGameBool;
 
@@ -32,6 +34,7 @@ namespace Assets.Scripts.GamePlay
             Money.SetBool("EndGame", true);
 			Money.transform.Find("MoneyText").gameObject.GetComponent<UICountMoney>().setTotalMoney();
             Spawner.gameObject.SetActive(false);
+            ExitButton.SetActive(true);
         }
 
         public void Update()
@@ -55,6 +58,11 @@ namespace Assets.Scripts.GamePlay
                     ++Count;
                 }
             }
+        }
+
+        public void Return()
+        {
+            SceneManager.LoadScene(2);
         }
     }
 }
