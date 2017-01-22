@@ -42,7 +42,8 @@ public class ItemShop : MonoBehaviour {
 	public void confirmSkin(GameObject _button)
 	{
 		for (int i = 0; i < 21; i++) {
-			if (nameOfTheSkin [i] == _button.transform.parent.gameObject.name) {
+			//if (nameOfTheSkin [i] == _button.transform.parent.gameObject.name) {
+			if (PlayerPrefs.HasKey(_button.transform.parent.gameObject.name)) {
 				actualSkin = _button.transform.parent.gameObject.name;
 				Debug.Log ("skin confirmed : " + actualSkin);
 				PlayerPrefs.SetString("CurrentSkin", _button.transform.parent.gameObject.GetComponent<RawImage>().texture.name);
@@ -55,8 +56,14 @@ public class ItemShop : MonoBehaviour {
 	public void buySkin(GameObject _coin)
 	{
 		// condition pour l'achat
-		nameOfTheSkin [indexBuy] = _coin.transform.parent.gameObject.name;
-
+		if (PlayerPrefs.GetInt("Money") >= 4)
+		{
+			nameOfTheSkin [indexBuy] = _coin.transform.parent.gameObject.name;
+			PlayerPrefs.SetInt(_coin.transform.parent.gameObject.name, 1);
+			PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money") - 4);
+		}
+		else
+			print("Not enough money");
 	}
 
 	void displayByTheLeft() // gauche
