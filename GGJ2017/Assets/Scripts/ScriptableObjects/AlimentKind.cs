@@ -13,5 +13,6 @@ namespace Assets.Scripts.ScriptableObjects
         public Sprite Texture;
         public Sprite EndTexture;
         public float[] Size;
+        public bool Rotate = true;
     }
 }

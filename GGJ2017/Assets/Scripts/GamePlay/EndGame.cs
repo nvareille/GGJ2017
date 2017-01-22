@@ -51,7 +51,7 @@ namespace Assets.Scripts.GamePlay
                     GameObject o = Instantiate(Food);
 
                     FoodFaller f = o.GetComponent<FoodFaller>();
-                    f.Init(12, UI.Got[Count]);
+                    f.Init(12, UI.Aliments[Count].Aliment);
                     ++Count;
                 }
             }

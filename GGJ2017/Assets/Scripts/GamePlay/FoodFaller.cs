@@ -9,11 +9,13 @@ namespace Assets.Scripts.GamePlay
         public float ToFall;
         public float FallSpeed = 1f;
         public float RotationSpeed = 1f;
+        private bool Rotate;
 
         public void Init(float Y, AlimentKind alim)
         {
             transform.position = new Vector3(0, Y, 0);
             transform.localScale = new Vector3(alim.Size[0], alim.Size[1], 0);
+            Rotate = alim.Rotate;
             ToFall = Y + 1;
             Renderer.sprite = alim.EndTexture;
             RotationSpeed *= Random.Range(1, 3);
@@ -27,7 +29,8 @@ namespace Assets.Scripts.GamePlay
             {
                 ToFall -= Time.deltaTime * FallSpeed;
                 transform.position -= new Vector3(0, Time.deltaTime * FallSpeed, 0);
-                transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0, 0, RotationSpeed * Time.deltaTime));
+                if (Rotate)
+                    transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0, 0, RotationSpeed * Time.deltaTime));
             }
         }
     }
